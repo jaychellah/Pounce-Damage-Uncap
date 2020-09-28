@@ -88,8 +88,8 @@ const char c_sPattern[] = "\xF3\x0F\x10\x1D\x2A\x2A\x2A\x2A\xF3\x0F\x59\xC0\xF3\
 // comiss  xmm0, ds:flt_BAA9BC (masked)
 // jbe     loc_95EF20
 // movss   xmm1, [ebp+var_19C] (only the instruction)
-// 0F 2F 05 ? ? ? ? 0F 86 90 02 00 00 F3 0F 10
-const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\x90\x02\x00\x00\xF3\x0F\x10";
+// 0F 2F 05 ? ? ? ? 0F 86 ? ? 00 00 F3 0F 10 8D
+const char c_sPattern[] = "\x0F\x2F\x05\x2A\x2A\x2A\x2A\x0F\x86\x2A\x2A\x00\x00\xF3\x0F\x10\x8D";
 
 //comiss  xmm0, ds:fl_300
 // instruction starts at sig start, addr is 3 bytes into instruction
@@ -270,7 +270,7 @@ const char *PounceDamageUncap::GetLicense()
 
 const char *PounceDamageUncap::GetVersion()
 {
-	return "1.1.0.0";
+	return "1.1.0.1";
 }
 
 const char *PounceDamageUncap::GetDate()
